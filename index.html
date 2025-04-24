@@ -1,56 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>האוניברסיטה הפתוחה בסח'נין</title>
-  <link rel="icon" type="image/png" href="https://mhajuj.github.io/logo-op-3-languages-white-8.png">
+  <link rel="icon" href="https://mhajuj.github.io/logo-op-3-languages-white-8.png" />
   <style>
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
-      background-image: url('https://mhajuj.github.io/background-vr.jpg');
+      font-family: Arial, sans-serif;
+      background: url('https://mhajuj.github.io/background-vr.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: white;
-      direction: rtl;
+      color: #fff;
     }
     header {
-      background-color: rgba(0, 0, 0, 0.65);
+      background: rgba(0,0,0,0.75);
       position: sticky;
       top: 0;
       z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 10px 20px;
+    }
+    .logo-title {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      text-align: right;
+      gap: 10px;
     }
-    header img {
+    .logo-title img {
       max-height: 50px;
     }
-    header h1 {
-      font-size: 1.6em;
+    .logo-title h1 {
       margin: 0;
+      font-size: 1.5em;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav li a {
+      color: white;
+      text-decoration: none;
       font-weight: bold;
     }
+    .hamburger {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+
     section {
-      padding: 30px 20px;
+      padding: 30px;
       max-width: 900px;
       margin: auto;
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 12px;
     }
     h2 {
-      color: #ffffff;
       font-size: 1.4em;
     }
     p {
       font-size: 1.1em;
+    }
+    .program-info {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      display: none;
     }
     .contact {
       background-color: rgba(255,255,255,0.1);
@@ -67,85 +111,66 @@
       border-radius: 5px;
     }
     footer {
-      background: transparent;
-      color: white;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
       text-align: center;
       padding: 20px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin-bottom: 12px;
-    }
-    ul li a {
-      text-decoration: none;
-      color: #fff;
-      background-color: rgba(255,255,255,0.15);
-      padding: 12px;
-      display: block;
-      border-radius: 8px;
-      text-align: center;
-    }
-    #program-info {
-      margin-top: 30px;
-      padding: 20px;
-      background-color: rgba(0,0,0,0.5);
-      border-radius: 8px;
-      display: none;
+      background: rgba(0, 0, 0, 0.6);
     }
   </style>
   <script>
+    function toggleMenu() {
+      document.querySelector("nav ul").classList.toggle("show");
+    }
+
     function showProgramInfo(text) {
-      const infoBox = document.getElementById('program-info');
-      infoBox.innerHTML = text;
-      infoBox.style.display = 'block';
+      const info = document.querySelector(".program-info");
+      info.innerHTML = text;
+      info.style.display = "block";
     }
   </script>
 </head>
 <body>
   <header>
-    <img src="https://mhajuj.github.io/logo-op-3-languages-white-8.png" alt="לוגו האוניברסיטה הפתוחה">
-    <h1>האוניברסיטה הפתוחה - סח'נין</h1>
+    <div class="logo-title">
+      <img src="https://mhajuj.github.io/logo-op-3-languages-white-8.png" alt="לוגו" />
+      <h1>האוניברסיטה הפתוחה - סח'נין</h1>
+    </div>
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul>
+        <li><a href="#programs">מסלולי לימוד</a></li>
+        <li><a href="#register">הרשמה</a></li>
+        <li><a href="#contact">צור קשר</a></li>
+      </ul>
+    </nav>
   </header>
-  <div style="text-align: center; padding: 10px 20px; font-size: 1.2em; background-color: rgba(0,0,0,0.55);">
-    העתיד מתחיל כאן – ידע, יצירתיות וטכנולוגיה בידיים שלך.
-  </div>
-
 
   <section>
-    <div style="text-align: center; padding: 15px 10px; font-size: 1.3em; font-weight: bold;
-                background-color: rgba(255,255,255,0.1); color: #ffffff; margin-bottom: 20px;
-                border-radius: 8px;">
+    <div style="text-align:center; margin-bottom: 20px; font-weight:bold; font-size: 1.3em;">
       העתיד מתחיל כאן – ידע, יצירתיות וטכנולוגיה בידיים שלך.
     </div>
 
-    <h2>על האוניברסיטה הפתוחה</h2>
-    <p>האוניברסיטה הפתוחה בסח'נין מציעה מגוון מסלולי לימוד אקדמיים ומקצועיים, בסביבה תומכת וחדשנית.</p>
-
-    <h2>מסלולי לימוד</h2>
+    <h2 id="programs">מסלולי לימוד</h2>
     <ul>
-      <li><a onclick="showProgramInfo('תואר ראשון כללי מציע תשתית רחבה ללמידה אקדמית...')">תואר ראשון כללי</a></li>
-      <li><a onclick="showProgramInfo('תחום מדעי החברה הוא רחב מאוד...')">תואר ראשון במדעי החברה והרוח</a></li>
-      <li><a onclick="showProgramInfo('תואר ראשון בחשבונאות מוצע בשני מסלולים...')">תואר ראשון בחשבונאות</a></li>
-      <li><a onclick="showProgramInfo('תואר במדעי המחשב מעניק לסטודנטים כלים מעשיים...')">תואר ראשון במדעים - מדעי המחשב</a></li>
-      <li><a onclick="showProgramInfo('תוכנית הדיפלומה באומנות משקמת משלבת ידע תיאורטי...')">דיפלומה באומנות משקמת</a></li>
-      <li><a onclick="showProgramInfo('מסלול ניהול עסקי וייעוץ משכנתאות מעניק ידע מעשי...')">ניהול עסקי וייעוץ משכנתאות</a></li>
-      <li><a onclick="showProgramInfo('תוכנית הכשרת מורים להוראה מותאמת מתמקדת...')">הכשרת מורים להוראה מותאמת</a></li>
+      <li><a href="#" onclick="showProgramInfo('תואר ראשון כללי מציע תשתית רחבה ללמידה אקדמית...')">תואר ראשון כללי</a></li>
+      <li><a href="#" onclick="showProgramInfo('תחום מדעי החברה הוא רחב מאוד...')">תואר ראשון במדעי החברה והרוח</a></li>
+      <li><a href="#" onclick="showProgramInfo('תואר ראשון בחשבונאות מוצע בשני מסלולים...')">תואר ראשון בחשבונאות</a></li>
+      <li><a href="#" onclick="showProgramInfo('תואר במדעי המחשב מעניק לסטודנטים כלים מעשיים...')">תואר ראשון במדעים - מדעי המחשב</a></li>
+      <li><a href="#" onclick="showProgramInfo('תוכנית הדיפלומה באומנות משקמת משלבת ידע תיאורטי...')">דיפלומה באומנות משקמת</a></li>
+      <li><a href="#" onclick="showProgramInfo('מסלול ניהול עסקי וייעוץ משכנתאות מעניק ידע מעשי...')">ניהול עסקי וייעוץ משכנתאות</a></li>
+      <li><a href="#" onclick="showProgramInfo('תוכנית הכשרת מורים להוראה מותאמת מתמקדת...')">הכשרת מורים להוראה מותאמת</a></li>
     </ul>
 
-    <div id="program-info"></div>
+    <div class="program-info"></div>
 
-    <p>להרשמה מלאה ומקיפה, אנא עברו לטופס ההרשמה החדש:</p>
-    <a href="https://forms.iforms.co.il/Show_form/3gkcfo17875f0f" target="_blank"
-       style="display: inline-block; padding: 12px 24px; background-color: #004f9e; color: #fff;
-       text-decoration: none; border-radius: 5px;">
+    <h2 id="register">הרשמה</h2>
+    <p>להרשמה מלאה, נא לעבור לטופס:</p>
+    <a href="https://forms.iforms.co.il/Show_form/3gkcfo17875f0f"
+       style="display: inline-block; background: #004f9e; color: white; padding: 12px 24px;
+              text-decoration: none; border-radius: 6px;" target="_blank">
       מעבר לטופס הרשמה
     </a>
 
-    <h2>צור קשר</h2>
+    <h2 id="contact">צור קשר</h2>
     <div class="contact">
       <p><strong>טלפון:</strong> 04-6744416</p>
       <p><strong>מייל:</strong> info@openu-sakhnin.ac.il</p>
