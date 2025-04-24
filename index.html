@@ -11,16 +11,12 @@
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
-      direction: rtl;
-    }
-    header {
-      background-image: url('https://openu-vr.s3.eu-west-1.amazonaws.com/bg-openuniv-vrclean.jpg');
+      background-image: url('https://mhajuj.github.io/background-vr.jpg');
       background-size: cover;
-      background-position: top center;
-      background-repeat: no-repeat;
-      position: relative;
-      overflow: hidden;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      direction: rtl;
     }
     header > div {
       position: relative;
@@ -34,13 +30,13 @@
       padding: 30px;
       max-width: 900px;
       margin: auto;
-      background-color: white;
+      background-color: rgba(0,0,0,0.65);
     }
     h1, h2 {
-      color: #004f9e;
+      color: #ffffff;
     }
     .contact {
-      background-color: #eeeeee;
+      background-color: rgba(255,255,255,0.1);
       padding: 20px;
       border-radius: 10px;
     }
@@ -54,10 +50,7 @@
       border-radius: 5px;
     }
     footer {
-      background-image: url('https://openu-vr.s3.eu-west-1.amazonaws.com/bg-openuniv-vrclean.jpg');
-      background-size: cover;
-      background-position: bottom center;
-      background-repeat: no-repeat;
+      background: transparent;
       color: white;
       text-shadow: 0 1px 2px rgba(0,0,0,0.6);
       text-align: center;
@@ -65,13 +58,13 @@
     }
     ul li a {
       text-decoration: none;
-      color: #004f9e;
+      color: #ffffff;
       cursor: pointer;
     }
     #program-info {
       margin-top: 30px;
       padding: 20px;
-      background-color: #f0f0f0;
+      background-color: rgba(0,0,0,0.5);
       border-radius: 8px;
       display: none;
     }
@@ -99,13 +92,13 @@
 
     <h2>מסלולי לימוד</h2>
     <ul>
-      <li><a onclick="showProgramInfo('תואר ראשון כללי מציע תשתית רחבה ללמידה אקדמית, ומיועד לסטודנטים שמחפשים גמישות בבחירת תחומי עניין שונים. ניתן לשלב קורסים ממגוון תחומים: מדעי הרוח, החברה, הטבע והטכנולוגיה. מתאים למי שמעוניין ללמוד באקדמיה אך לא להתחייב לתחום התמחות יחיד.')">תואר ראשון כללי</a></li>
-      <li><a onclick="showProgramInfo('תחום מדעי החברה הוא רחב מאוד. תחומים כגון פסיכולוגיה, סוציולוגיה, חינוך, ניהול וכלכלה משתייכים לתחום זה. מסלול זה מתאים במיוחד לסטודנטים שאינם מעוניינים בלימודי מתמטיקה כחלק מהתואר האקדמי, והוא מאפשר שילוב עם מקצועות הכשרה מקצועית כמו דיפלומה באומנות משקמת או ניהול עסקי – ואף מסלולי הסבה אקדמית בעתיד.')">תואר ראשון במדעי החברה והרוח</a></li>
-      <li><a onclick="showProgramInfo('תואר ראשון בחשבונאות מוצע בשני מסלולים: מסלול אינטנסיבי בן שלוש שנים וחצי, או מסלול נוח וגמיש הנפרס על פני ארבע שנים וחצי. הלימודים כוללים קורסים בכלכלה, ניהול, חשבונאות פיננסית ומיסוי, ומכינים את הסטודנטים לבחינות ההסמכה של מועצת רואי החשבון. בוגרי המסלול משתלבים במשרדי רואי חשבון, בחברות פרטיות וציבוריות, בגופים פיננסיים ובמערכות ניהול כספים בעמותות ורשויות מקומיות.')">תואר ראשון בחשבונאות</a></li>
-      <li><a onclick="showProgramInfo('תואר במדעי המחשב מעניק לסטודנטים כלים מעשיים ותיאורטיים בתחומי תכנות, מבני נתונים, אלגוריתמיקה, אבטחת מידע ועוד. המסלול מיועד למעוניינים להשתלב בעולם ההייטק, הפיתוח והתעשייה הטכנולוגית. ניתן ללמוד במסלול גמיש המשלב לימודים מרחוק עם תמיכה אקדמית.')">תואר ראשון במדעים - מדעי המחשב</a></li>
-      <li><a onclick="showProgramInfo('תוכנית הדיפלומה באומנות משקמת משלבת ידע תיאורטי עם כלים יצירתיים לעבודה טיפולית באמצעות אמנות. הלימודים כוללים פסיכולוגיה, חינוך, תולדות האמנות, דידקטיקה ופרקטיקום בשטח. מתאימה לאנשים יצירתיים הרוצים לעסוק בטיפול או לשלב אמנות בעבודתם המקצועית.')">דיפלומה באומנות משקמת</a></li>
-      <li><a onclick="showProgramInfo('מסלול ניהול עסקי וייעוץ משכנתאות מעניק ידע מעשי בעולם הפיננסים, הבנקאות והיזמות. הסטודנטים לומדים על התנהלות עסקית, ניהול תקציבים, ייעוץ פיננסי והיכרות עם שוק הנדל"ן והמשכנתאות בישראל. מתאים למעוניינים לעסוק בייעוץ, שיווק נדל"ן או ניהול עסק עצמאי.')">ניהול עסקי וייעוץ משכנתאות</a></li>
-      <li><a onclick="showProgramInfo('תוכנית הכשרת מורים להוראה מותאמת מתמקדת בהתאמת תכנים ושיטות הוראה לתלמידים עם צרכים מיוחדים. הלימודים כוללים גישות חינוכיות, אבחון דידקטי, תכנון הוראה מותאמת ופרקטיקום במסגרות חינוכיות. מתאימה לאקדמאים או לבעלי רקע בהוראה המעוניינים בהתמחות בתחום.')">הכשרת מורים להוראה מותאמת</a></li>
+      <li><a onclick="showProgramInfo('תואר ראשון כללי מציע תשתית רחבה ללמידה אקדמית...')">תואר ראשון כללי</a></li>
+      <li><a onclick="showProgramInfo('תחום מדעי החברה הוא רחב מאוד...')">תואר ראשון במדעי החברה והרוח</a></li>
+      <li><a onclick="showProgramInfo('תואר ראשון בחשבונאות מוצע בשני מסלולים...')">תואר ראשון בחשבונאות</a></li>
+      <li><a onclick="showProgramInfo('תואר במדעי המחשב מעניק לסטודנטים כלים מעשיים...')">תואר ראשון במדעים - מדעי המחשב</a></li>
+      <li><a onclick="showProgramInfo('תוכנית הדיפלומה באומנות משקמת משלבת ידע תיאורטי...')">דיפלומה באומנות משקמת</a></li>
+      <li><a onclick="showProgramInfo('מסלול ניהול עסקי וייעוץ משכנתאות מעניק ידע מעשי...')">ניהול עסקי וייעוץ משכנתאות</a></li>
+      <li><a onclick="showProgramInfo('תוכנית הכשרת מורים להוראה מותאמת מתמקדת...')">הכשרת מורים להוראה מותאמת</a></li>
     </ul>
 
     <div id="program-info"></div>
