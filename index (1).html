@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>האוניברסיטה הפתוחה בסח'נין</title>
+  <link rel="icon" type="image/png" href="logo-op-3-languages-white-8.png">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      direction: rtl;
+    }
+    header {
+      background-image: url('https://openu-vr.s3.eu-west-1.amazonaws.com/bg-openuniv-vrclean.jpg');
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+    header > div {
+      position: relative;
+      z-index: 1;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+      backdrop-filter: brightness(1.2);
+    }
+    section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+    }
+    h1, h2 {
+      color: #004f9e;
+    }
+    .contact {
+      background-color: #eeeeee;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .whatsapp {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      background-image: url('https://openu-vr.s3.eu-west-1.amazonaws.com/bg-openuniv-vrclean.jpg');
+      background-size: cover;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      color: white;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 20px;
+    }
+    ul li a {
+      text-decoration: none;
+      color: #004f9e;
+      cursor: pointer;
+    }
+    #program-info {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      display: none;
+    }
+  </style>
+  <script>
+    function showProgramInfo(text) {
+      const infoBox = document.getElementById('program-info');
+      infoBox.innerHTML = text;
+      infoBox.style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div>
+      <img src="logo-op-3-languages-white-8.png" alt="לוגו האוניברסיטה הפתוחה" style="max-width: 160px; margin-bottom: 20px;">
+      <h1 style="margin: 0; font-size: 2.8em;">האוניברסיטה הפתוחה - סח'נין</h1>
+      <p style="font-size: 1.3em; margin-top: 12px;">לימודים גבוהים קרוב לבית, בגמישות שמתאימה לך</p>
+    </div>
+  </header>
+
+  <section>
+    <h2>על המרכז</h2>
+    <p>האוניברסיטה הפתוחה בסח'נין מציעה מגוון מסלולי לימוד אקדמיים ומקצועיים, בסביבה תומכת וחדשנית.</p>
+
+    <h2>מסלולי לימוד</h2>
+    <ul>
+      <li><a onclick="showProgramInfo('תואר ראשון כללי מציע תשתית רחבה ללמידה אקדמית...')">תואר ראשון כללי</a></li>
+      <li><a onclick="showProgramInfo('תחום מדעי החברה הוא רחב מאוד...')">תואר ראשון במדעי החברה והרוח</a></li>
+      <li><a onclick="showProgramInfo('תואר ראשון בחשבונאות מוצע בשני מסלולים...')">תואר ראשון בחשבונאות</a></li>
+      <li><a onclick="showProgramInfo('תואר במדעי המחשב מעניק לסטודנטים כלים מעשיים...')">תואר ראשון במדעים - מדעי המחשב</a></li>
+      <li><a onclick="showProgramInfo('תוכנית הדיפלומה באומנות משקמת משלבת ידע תיאורטי...')">דיפלומה באומנות משקמת</a></li>
+      <li><a onclick="showProgramInfo('מסלול ניהול עסקי וייעוץ משכנתאות מעניק ידע מעשי...')">ניהול עסקי וייעוץ משכנתאות</a></li>
+      <li><a onclick="showProgramInfo('תוכנית הכשרת מורים להוראה מותאמת מתמקדת...')">הכשרת מורים להוראה מותאמת</a></li>
+    </ul>
+
+    <div id="program-info"></div>
+
+    <p>להרשמה מלאה ומקיפה, אנא עברו לטופס ההרשמה החדש:</p>
+    <a href="https://forms.iforms.co.il/Show_form/3gkcfo17875f0f" target="_blank"
+       style="display: inline-block; padding: 12px 24px; background-color: #004f9e; color: #fff;
+       text-decoration: none; border-radius: 5px;">
+      מעבר לטופס הרשמה
+    </a>
+
+    <h2>צור קשר</h2>
+    <div class="contact">
+      <p><strong>טלפון:</strong> 04-6744416</p>
+      <p><strong>מייל:</strong> info@openu-sakhnin.ac.il</p>
+      <p><strong>כתובת:</strong> בניין עומר אלמוכתאר, קומה 2, סח'נין</p>
+      <a class="whatsapp" href="https://wa.me/97246744416" target="_blank">צ'אט ב-WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; כל הזכויות שמורות - האוניברסיטה הפתוחה סח'נין</p>
+  </footer>
+</body>
+</html>
