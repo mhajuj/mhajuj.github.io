@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+# Regenerate the preview HTML file with the latest landing page code
+html_content = """<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -108,3 +109,9 @@
   <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
 </body>
 </html>
+"""
+
+with open('/mnt/data/landingpage_preview.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("Preview file /mnt/data/landingpage_preview.html has been updated.")
